@@ -198,7 +198,7 @@ function ReqOfertar(datos){
         console.log(value);
         window.location.href='index.html'
     }, (err) => {
-        alert("Necesitas estar loggeado");
+        alert(err);
         console.log(err);
     });
 }
