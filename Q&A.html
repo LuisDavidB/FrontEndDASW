@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Q&A</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body background="Fondo.jpg">
+    <nav class="navbar navbar-expand-lg navbar-light" style=background-color:dimgray>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html" style="color: white;">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="Q&A.html" style="color: white;">Q&A <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item ">
+            </li>
+            <li class="nav-item dropdown" id="Administrador">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Administrador
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="Consultas.html" style="color:darkgrey" >Administración de usuarios</a>
+                <a class="dropdown-item" href="Productos.html">Administracion de productos</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto" >
+            <li class="nav-item" id="Pregunta">
+              <a class="nav-link" href="#" style="color: white;" data-toggle="modal"  data-target="#ModalCrearPregunta">Añadir pregunta</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+                    <!--Modal Crear Pregunta-->
+      <div class="modal" tabindex="-1" role="dialog" id="ModalCrearPregunta">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Crear Pregunta</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form>
+            <div class="modal-body">
+                    <div class="form-group">
+                      <label for="CrearPregunta">Pregunta</label>
+                      <div class="input-group">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <div class="fa fa-question"></div> 
+                            </div>
+                          </div>
+                        <textarea  type="text" class="form-control" id="CrearPregunta" placeholder="Escribe la pregunta" required></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="CrearRespuesta">Respuesta</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                              <div class="fa fa-bars"></div> 
+                          </div>
+                        </div>
+                        <textarea  type="text" class="form-control" id="CrearRespuesta" placeholder="Escribe la respuesta" required></textarea>
+                      </div>
+                    </div>     
+            </div>
+            <div class="modal-footer">
+                <div class="d-flex flex-column">
+                    <div class="p-2"> 
+                        <div class=w-100>
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn btn-secondary" id="BtnCan" data-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary" id="BtnCrear">Crear</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+           </div>
+          </div>
+         </div>
+    <h1>Preguntas Frecuentes</h1>
+    <p></p>
+    <div id="preguntas"></div>
+    <div class="modal" tabindex="-1" role="dialog" id="ModalEditarPregunta"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./request.js"></script>
+    <script src="./main_Q&A.js"></script>
+</body>
+</html>
